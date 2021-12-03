@@ -1,0 +1,25 @@
+values, gamma_string, epsilon_string = [], "", ""
+
+with open("input2.txt", "r") as f:
+    size = len(f.readline().rstrip())
+    values = [int(line.rstrip(), 2) for line in f.readlines()]
+
+for i in range(size):
+    odd, even = 0, 0
+    for i in range(len(values)):
+        if values[i] % 2 == 0:
+            even += 1
+        else:
+            odd += 1
+        values[i] = values[i] >> 1
+    if even > odd:
+        gamma_string = f"0{gamma_string}"
+        epsilon_string = f"1{epsilon_string}"
+    else:
+        gamma_string = f"1{gamma_string}"
+        epsilon_string = f"0{epsilon_string}"
+    print(even, odd)
+
+gamma, epsilon = int(gamma_string, 2), int(epsilon_string, 2)
+
+print(gamma * epsilon)
