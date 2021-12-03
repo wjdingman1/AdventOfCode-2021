@@ -1,4 +1,7 @@
-hor, ver, commands = 0, 0, []
+hor, ver, = (
+    0,
+    0,
+)
 
 with open("input.txt", "r") as f:
     commands = [line.rstrip() for line in f.readlines()]

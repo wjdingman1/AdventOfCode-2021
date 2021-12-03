@@ -1,8 +1,7 @@
-hor, ver, aim, commands, = (
+hor, ver, aim = (
     0,
     0,
     0,
-    [],
 )
 
 with open("input.txt", "r") as f:

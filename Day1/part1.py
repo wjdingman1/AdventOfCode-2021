@@ -1,4 +1,4 @@
-depths, count = [], 0
+count = 0
 
 with open("input.txt", "r") as f:
     depths = [int(line.rstrip()) for line in f.readlines()]
